@@ -30,6 +30,7 @@ public class RectangleTest {
 
     public void doubleSizeTest(){
         Rectangle rectangleTest1 = new Rectangle(4,3);
-        
+        rectangleTest1.doubleSize();
+        System.out.println(rectangleTest1);
     }
 }
