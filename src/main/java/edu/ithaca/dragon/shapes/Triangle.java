@@ -4,8 +4,21 @@ public class Triangle {
     private double base;
     private double height;
 
+    public Triangle(double baseIn, double heightIn){
+        base = baseIn;
+        height = heightIn;
+    }
+
     public double calcArea(){
-        throw 
+        return (base * height) / 2;
+    }
+
+    public double longestLineWithin(){
+        throw
+    }
+
+    public void doubleSize(){
+        throw
     }
     
 }
