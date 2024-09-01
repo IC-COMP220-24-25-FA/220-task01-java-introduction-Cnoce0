@@ -14,11 +14,12 @@ public class Triangle {
     }
 
     public double longestLineWithin(){
-        throw
+        return height;
     }
 
     public void doubleSize(){
-        throw
+        height = height * 2;
+        base = base * 2;
     }
     
 }
