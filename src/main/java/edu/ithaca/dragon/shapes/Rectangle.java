@@ -24,8 +24,12 @@ public class Rectangle {
         double num2 = this.width * this.width;
         double num3 = num + num2;
         return Math.sqrt(num3);
-            
+    
         
+    }
+
+    public String toString(){
+        return "Width = " + this.width + "Height = " + this.length + "Area = " + this.calcArea();
     }
     
 }
