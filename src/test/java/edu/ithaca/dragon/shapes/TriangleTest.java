@@ -20,7 +20,7 @@ public class TriangleTest {
 
     @Test
     public void longestLineWithinTest(){
-        Triangle triangletest1 = new Triangle(4,5);
+        Triangle triangletest1 = new Triangle(4,3);
         assertEquals(5, triangletest1.longestLineWithin(), .0001);
 
         Triangle triangletest2 = new Triangle(4,10);
