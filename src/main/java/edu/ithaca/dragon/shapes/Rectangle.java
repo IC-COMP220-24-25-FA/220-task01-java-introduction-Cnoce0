@@ -29,7 +29,7 @@ public class Rectangle {
     }
 
     public String toString(){
-        return "Width = " + this.width + "Height = " + this.length + "Area = " + this.calcArea();
+        return " Width = " + this.width + " Height = " + this.length + " Area = " + this.calcArea() + " Longest Line within = " + this.longestLineWithin();
     }
     
 }
