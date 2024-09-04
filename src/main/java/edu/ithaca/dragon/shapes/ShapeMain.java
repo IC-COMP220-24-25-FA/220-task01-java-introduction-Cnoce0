@@ -29,7 +29,10 @@ public class ShapeMain {
         for (int i=0; i < 5; i++){
             System.out.println(rectangleList.get(i));
         }
+        System.out.println("Choose one Rectangle to double: ");
+        private int userChoice;
         
+        rectangleList.get(userChoice);
 
         
 
