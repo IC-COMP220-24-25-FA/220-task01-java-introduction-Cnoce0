@@ -1,5 +1,7 @@
 package edu.ithaca.dragon.practice;
 
+import java.util.List;
+import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -58,6 +60,24 @@ public class FunctionPracticeTest {
 
     @Test
     public void findFirstLargest(){
+        List<Integer> testList = new ArrayList<Integer>();
+        testList.add(5);
+        testList.add(5);
+        testList.add(5);
+        testList.add(10);
+        testList.add(5);
+        assertEquals(3, FunctionPractice.findFirstLargest(testList));
+        List<Integer> testList2 = new ArrayList<Integer>();
+        testList2.add(5);
+        testList2.add(5);
+        testList2.add(5);
+        testList2.add(5);
+        testList2.add(5);
+        assertEquals(0,FunctionPractice.findFirstLargest(testList2));
+        List<Integer> testList3 = new ArrayList<Integer>();
+        assertEquals(-1,FunctionPractice.findFirstLargest(testList3));
+        //Testing to make sure the whole function works with every scenario thats normal
+        
 
     }
     
