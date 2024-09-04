@@ -34,7 +34,17 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers are negative
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+        if (originalPrice < 0){
+            throw new IllegalArgumentException("Number cannot be negative");
+        } else if (discountPercent < 0){
+            throw new IllegalArgumentException("Number cannot be negative");
+        } else if (salesTax < 0){
+            throw new IllegalArgumentException("Number cannot be negative");
+        }
+        discountPercent = discountPercent / 100;
+        double discountNum = originalPrice * discountPercent;
+        originalPrice = originalPrice - discountNum;
+        return originalPrice + salesTax;
     }
 
     /**
