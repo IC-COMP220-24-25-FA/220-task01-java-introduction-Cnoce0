@@ -7,6 +7,9 @@ public class Circle {
      * @throws IllegalArgumentException if radius is not a positive number
      */
     public Circle(double radius){
+        if (radius < 0){
+            throw new IllegalArgumentException("negative number");
+        }
         this.radius = radius;
     }
 
@@ -29,5 +32,9 @@ public class Circle {
      */
     public double longestLineWithin(){
         return this.radius * 2;
+    }
+
+    public String toString(){
+        return " Radius = " + this.radius + " Area = " + this.calcArea() + " Longest Line = " + this.longestLineWithin();
     }
 }

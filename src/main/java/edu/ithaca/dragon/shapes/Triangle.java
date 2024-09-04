@@ -5,6 +5,9 @@ public class Triangle {
     private double height;
 
     public Triangle(double baseIn, double heightIn){
+        if (baseIn < 0 || heightIn < 0 ){
+            throw new IllegalArgumentException("No negative numbers");
+        }
         base = baseIn;
         height = heightIn;
     }
@@ -14,7 +17,8 @@ public class Triangle {
     }
 
     public double longestLineWithin(){
-        return height;
+        double newNum = (base * base) + (height * height);
+        return Math.sqrt(newNum);
     }
 
     public void doubleSize(){
