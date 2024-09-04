@@ -31,6 +31,43 @@ public class FunctionPracticeTest {
         assertEquals(50, FunctionPractice.calcSalePrice(90.0, 50.0, 5.00));
         assertEquals(55.28, FunctionPractice.calcSalePrice(50, 0, 5.28));
         assertEquals(29.88, FunctionPractice.calcSalePrice(35.99, 25.0, 2.88));
+        
+        //These first tests are just to make sure that calcSalePrice is working correctly
+
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-25.0, -40.0, -10.0));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(25.0, -40.0, 10.0));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(25.0, 40.0, -10.0));
+        
+        //These tests are to make sure the function throws an error when a negative is put into the function
+    }
+
+    @Test
+    public void isGoodDog(){
+        assertEquals(true, FunctionPractice.isGoodDog(5, 50, true));
+        assertEquals(false, FunctionPractice.isGoodDog(2, 0, false));
+        assertEquals(false, FunctionPractice.isGoodDog(5, 20, false));
+
+        //Checking if the function itself works properly
+
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-2, -4, false));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-2, 4, false));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(2, -4, false));
+
+        //Checks to make sure an error is returned if the function is given a negative number
+    }
+
+    @Test
+    public void findFirstLargest(){
+
     }
     
+    @Test
+    public void findLastLargest(){
+
+    }
+
+    @Test
+    public void findFirstMostOccurencesOfLetter(){
+
+    }
 }
