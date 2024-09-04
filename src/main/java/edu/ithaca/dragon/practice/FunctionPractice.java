@@ -9,11 +9,29 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
-        throw new RuntimeException("Not Implemented");
+        if (first < 0){
+            throw new IllegalArgumentException("Number cannot be negative");
+        } else if (second < 0 ){
+            throw new IllegalArgumentException("Number cannot be negative");
+        } else if (third < 0 ){
+            throw new IllegalArgumentException("Number cannot be negative");
+        }
+        
+        
+        int largestNum = first;
+        if (largestNum < second){
+            largestNum = second;
+        } else if (largestNum < third){
+            largestNum = third;
+        }
+
+        return largestNum;
     }
+    
     
     /**
      * @return the final price at register of the given item after discount and tax applied
+     * @throws IllegalArgumentException if any of the numbers are negative
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
         throw new RuntimeException("Not Implemented");
@@ -21,6 +39,7 @@ public class FunctionPractice {
 
     /**
      * @return true if the data collected shows the dog is good, false if bad dog today
+     * @throws IllegalArugmentException if any of the numbers are negative 
      */
     public static boolean isGoodDog(int yearsOld, int daysSinceShoesChewed, boolean fetchedThePaperToday){
         throw new RuntimeException("Not Implemented");
@@ -44,7 +63,7 @@ public class FunctionPractice {
 
     /**
      * @return the string that has contains the most occurences of the given letter
-     * @throws 
+     * @throws IllegalArgumentException if the letter is not in any of the words
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
         throw new RuntimeException("Not Implemented");
