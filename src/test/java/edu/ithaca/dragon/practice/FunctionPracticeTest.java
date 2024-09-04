@@ -104,6 +104,18 @@ public class FunctionPracticeTest {
 
     @Test
     public void findFirstMostOccurencesOfLetter(){
+        List<String> testList = new ArrayList<String>();
+        testList.add("people");
+        testList.add("jobs");
+        testList.add("words");
+        assertEquals("people", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'p'));
+        assertEquals("jobs", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'j'));
+        assertEquals("jobs words", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 's'));
+        //Testing basic functions of the function and testing to make sure if two words have the same amount that it returns both words
 
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'a'));
+        //making sure the function throws an error when you enter a letter thats not in the function
+
+       
     }
 }
