@@ -52,7 +52,23 @@ public class FunctionPractice {
      * @throws IllegalArugmentException if any of the numbers are negative 
      */
     public static boolean isGoodDog(int yearsOld, int daysSinceShoesChewed, boolean fetchedThePaperToday){
-        throw new RuntimeException("Not Implemented");
+        if (yearsOld < 0){
+            throw new IllegalArgumentException("Number cannot be negative");
+        } else if (daysSinceShoesChewed < 0){
+            throw new IllegalArgumentException("Number cannot be negative");
+        }
+        boolean bOrGDog = true;
+        if (yearsOld > 1 && daysSinceShoesChewed > 0 && fetchedThePaperToday == true){
+            bOrGDog = true;
+        } else if (fetchedThePaperToday == false){
+            bOrGDog  = false;
+        } else if (daysSinceShoesChewed == 0){
+            bOrGDog = false;
+        }
+
+        return bOrGDog;
+
+        
     }
 
     /**
