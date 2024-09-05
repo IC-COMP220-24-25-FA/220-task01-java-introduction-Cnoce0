@@ -26,4 +26,8 @@ public class Triangle {
         base = base * 2;
     }
     
+    public String toString(){
+        return " Base = " + base + " Height = " + height + " Area = " + calcArea() + " Longest Line = " + longestLineWithin();
+    }
+
 }
