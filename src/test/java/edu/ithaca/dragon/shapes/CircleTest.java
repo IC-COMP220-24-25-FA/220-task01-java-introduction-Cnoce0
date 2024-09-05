@@ -47,5 +47,11 @@ public class CircleTest {
 
     }
 
+    @Test
+    public void doubleSizeTest(){
+        Circle testCircle = new Circle(2);
+        testCircle.doubleSize();
+        System.out.println( testCircle);
+    }
     
 }
