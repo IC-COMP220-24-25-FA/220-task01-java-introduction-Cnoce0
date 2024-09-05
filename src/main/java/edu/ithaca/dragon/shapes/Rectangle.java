@@ -1,11 +1,14 @@
 package edu.ithaca.dragon.shapes;
 
-public class Rectangle {
+public class Rectangle  implements Shape{
     private double length;
     private double width;
 
     public Rectangle(double length, double width){
-         this.length = length;
+        if (length < 0 || width < 0){
+            throw new IllegalArgumentException("No negative numbers");
+        }
+        this.length = length;
         this.width = width;
 
     }

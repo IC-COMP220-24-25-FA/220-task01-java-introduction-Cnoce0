@@ -24,10 +24,10 @@ public class TriangleTest {
         assertEquals(5, triangletest1.longestLineWithin(), .0001);
 
         Triangle triangletest2 = new Triangle(4,10);
-        assertEquals(10, triangletest2.longestLineWithin(), .0001);
+        assertEquals(10.7703, triangletest2.longestLineWithin(), .0001);
 
         Triangle triangletest3 = new Triangle(4,20);
-        assertEquals(20, triangletest3.longestLineWithin(), .0001);
+        assertEquals(20.3961, triangletest3.longestLineWithin(), .0001);
 
     }
 
